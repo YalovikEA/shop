@@ -1,0 +1,45 @@
+@import '../utils/mixins.styl'
+
+.content-center
+  text-align center
+
+.cont-line
+  display flex
+  justify-content space-between
+  width 100%
+
+.cont-50
+  width 49.5%
+  display flex
+  justify-content space-between
+  flex-wrap wrap
+  flex-shrink 0
+
+.cont-25
+  width 49%
+  flex-shrink 0
+
+.social-list
+  display flex
+
+.social-list__item
+  border 2px solid #fff
+  size(35px)
+  margin-left -2px
+
+  &:first-child
+    margin-left 0
+
+.social-list__link
+  position relative
+  size(100%)
+  display block
+
+  font 0/0 serif
+  text-shadow none
+  color transparent
+
+  .icon
+    fill #fff
+    size(15px)
+    absolute-center()

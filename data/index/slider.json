@@ -1,0 +1,145 @@
+{
+  "slide1": {
+    "title" : "Чугунная кастрюля Staub",
+    "alt" : "slider to main page",
+    "image" : "slide1.jpg",
+    "colorsTitle" : "Цвета",
+    "colors" : {
+      "black" : {
+        "name" : "Черный",
+        "code" : "#000000"
+      },
+      "cherry" : {
+        "name" : "Вишневый",
+        "code" : "#d93639"
+      },
+      "grey" : {
+        "name" : "Серый",
+        "code" : "#9a988c"
+      }
+    },
+    "parametersTitle" : "Параметры",
+    "parameters" : {
+      "diameter" : {
+        "value" : "30 см",
+        "icon" : "resize"
+      },
+      "amount" : {
+        "value" : "8,35 л",
+        "icon" : "search"
+      }
+    },
+    "btn" : {
+      "href" : "javascript:void(0)",
+      "title" : "О кастрюле"
+    }
+  },
+
+  "slide2": {
+    "title" : "Чугунная кастрюля Staub",
+    "alt" : "slider to main page 23213213213123",
+    "image" : "slide2.jpg",
+    "colorsTitle" : "Цвета",
+    "colors" : {
+      "black" : {
+        "name" : "Черный",
+        "code" : "#000000"
+      },
+      "cherry" : {
+        "name" : "Вишневый",
+        "code" : "#d93639"
+      },
+      "grey" : {
+        "name" : "Серый",
+        "code" : "#9a988c"
+      }
+    },
+    "parametersTitle" : "Параметры",
+    "parameters" : {
+      "diameter" : {
+        "value" : "30 см",
+        "icon" : "resize"
+      },
+      "amount" : {
+        "value" : "8,35 л",
+        "icon" : "search"
+      }
+    },
+    "btn" : {
+      "href": "javascript:void(0)",
+      "title": "О кастрюле"
+    }
+  },
+
+  "slide3": {
+    "title" : "Чугунная кастрюля Staub",
+    "alt" : "slider to main page dfjhgfjg hhgk fgk gkhf",
+    "image" : "slide3.jpg",
+    "colorsTitle" : "Цвета",
+    "colors" : {
+      "black" : {
+        "name" : "Черный",
+        "code" : "#000000"
+      },
+      "cherry" : {
+        "name" : "Вишневый",
+        "code" : "#d93639"
+      },
+      "grey" : {
+        "name" : "Серый",
+        "code" : "#9a988c"
+      }
+    },
+    "parametersTitle" : "Параметры",
+    "parameters" : {
+      "diameter" : {
+        "value" : "30 см",
+        "icon" : "resize"
+      },
+      "amount" : {
+        "value" : "8,35 л",
+        "icon" : "search"
+      }
+    },
+    "btn" : {
+      "href": "javascript:void(0)",
+      "title": "О кастрюле"
+    }
+  },
+
+  "slide4": {
+    "title" : "Чугунная кастрюля Staub",
+    "alt" : "slider to main page jghf 124 1 dsgs  123421",
+    "image" : "slide4.jpg",
+    "colorsTitle" : "Цвета",
+    "colors" : {
+      "black" : {
+        "name" : "Черный",
+        "code" : "#000000"
+      },
+      "cherry" : {
+        "name" : "Вишневый",
+        "code" : "#d93639"
+      },
+      "grey" : {
+        "name" : "Серый",
+        "code" : "#9a988c"
+      }
+    },
+    "parametersTitle" : "Параметры",
+    "parameters" : {
+      "diameter" : {
+        "value" : "30 см",
+        "icon" : "resize"
+      },
+      "amount" : {
+        "value" : "8,35 л",
+        "icon" : "search"
+      }
+    },
+    "btn" : {
+      "href": "javascript:void(0)",
+      "title": "О кастрюле"
+    }
+  }
+}

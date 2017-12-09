@@ -1,0 +1,47 @@
+.recommended
+  // padding-top 70px
+  // padding-bottom 60px
+
+.recommended-slider__nav
+  display flex
+  justify-content center
+  align-items center
+  margin-top 40px
+  text-align center
+
+  .slick-dots
+    margin 0 20px
+    order 2
+
+    li
+      display inline-block
+      margin 0 5px
+
+.slick-active
+  .recommended-slider__dot
+    background-color blackColor
+
+
+.recommended-slider__dot
+  display block
+  size(13px)
+  border 2px solid blackColor
+  border-radius 50%
+  cursor pointer
+
+.recommended-slider__controls
+  size(50px)
+  background-color blackColor
+  cursor pointer
+  position relative
+
+  &--next
+    order 3
+
+  &--prev
+    order 1
+
+  .icon
+    absolute-center()
+    size(21px,12px)
+    fill #fff

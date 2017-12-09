@@ -1,0 +1,48 @@
+footer
+  .container
+    include menu
+
+    .footer
+      .footer-copyright
+        span.copyright 2016, LoremIpsum.com
+        ul.social-list.footer__social-list
+          +socialLink('javascript:void(0);','fb','fb')
+          +socialLink('javascript:void(0);','vk','vk')
+          +socialLink('javascript:void(0);','inst','inst')
+          +socialLink('javascript:void(0);','tw','tw')
+        a.footer-rules__link(href="javascript:void(0);") Правила сайта
+
+      .footer__payment-type.payment-type
+        span.payment-type__title Мы принимаем
+        ul.payment-type__list
+          +paymentType('yandex')
+          +paymentType('mastercard')
+          +paymentType('visa')
+          +paymentType('webmoney')
+
+      .footer-nav
+        ul.footer-nav__list
+          +footerNav('javascript:void(0);','Как заказать')
+          +footerNav('javascript:void(0);','Оплата')
+          +footerNav('javascript:void(0);','Доставка')
+          +footerNav('javascript:void(0);','Статьи')
+          +footerNav('javascript:void(0);','Видеообзоры')
+
+        ul.footer-nav__list
+          +footerNav('javascript:void(0);','Бренды')
+          +footerNav('javascript:void(0);','Возвраты товара')
+          +footerNav('javascript:void(0);','Новости магазина')
+          +footerNav('javascript:void(0);','О магазине')
+          +footerNav('javascript:void(0);','Контакты')
+
+      .footer-contacts
+        .footer-contacts__line
+          a.footer__phone(href="tel:+375336565656") +375 33 656-56-56
+          a.footer__feedback(href="javascript:void(0);") Обратный звонок
+        form.footer-subscribe-form
+          label.g-label Подпишитесь на новинки и акции
+          .footer-subscribe-form__line
+            input.g-input.g-input--email#email(type="email")
+            input.g-btn.g-btn--no-underline(type="submit" value="Подписаться")
+
+

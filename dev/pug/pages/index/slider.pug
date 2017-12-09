@@ -1,0 +1,43 @@
+section.index-slider
+  .index-slider__controls.index-slider__controls--next
+    +icon('arrow-up')
+  .index-slider__controls.index-slider__controls--prev
+    +icon('arrow-down')
+  .js-index-slider
+    each object in indexSlider
+      .index-slider__item
+        img(src=`static/img/content/main-slider/${object['image']}` alt= object['alt']).index-slider__img
+        .index-slider__content
+
+          span.index-slider__title= object['title']
+          .index-slider__product-info.product-info
+
+            .product-colors.product-info__item
+              span.product-info__title= object['colorsTitle']
+              each color in object.colors
+                .product-info__line
+                  .product-color.product-info__color(style=`background-color: ${color['code']}`)
+                  span= color['name']
+
+            .product-params.product-info__item
+              span.product-info__title= object['parametersTitle']
+              each param in object.parameters
+                .product-info__line
+                  +icon(param['icon'])
+                  span= param['value']
+
+          a(href= object.btn['href']).g-btn= object.btn['title']
+
+
+
+
+
+
+
+
+    //- .index-slider__item
+    //-   img(src="static/img/content/main-slider/slide2.jpg" alt="slider to main page").index-slider__img
+    //- .index-slider__item
+    //-   img(src="static/img/content/main-slider/slide3.jpg" alt="slider to main page").index-slider__img
+    //- .index-slider__item
+    //-   img(src="static/img/content/main-slider/slide4.jpg" alt="slider to main page").index-slider__img

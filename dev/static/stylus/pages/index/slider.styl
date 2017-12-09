@@ -1,0 +1,105 @@
+.index-slider
+  padding 0
+
+  .slick-dots
+    absolute($bottom:300px)
+    cursor pointer
+
+    li
+      margin-bottom 10px
+
+    &:last-child
+      margin-bottom 0
+
+.index-slider__item
+  position relative
+  height 800px
+
+.index-slider__controls
+  absolute($right:0)
+  size(50px)
+  background-color #fff
+  cursor pointer
+  z-index 1
+
+  &--next
+    absolute($bottom:355px)
+
+  &--prev
+    absolute($bottom:300px)
+
+  .icon
+    absolute-center()
+    size(21px,12px)
+
+.index-slider__dots
+  display block
+  size(16px)
+  border 2px solid #fff
+  border-radius 50%
+
+.slick-active
+  .index-slider__dots
+    background-color #fff
+
+.index-slider__img
+  width 100%
+  height 100%
+  display block
+
+.index-slider__content
+  absolute($left:50%,$top:250px)
+  transform translateX(-50%)
+  width 100%
+  max-width 900px
+  z-index 2
+
+.index-slider__title
+  display block
+  width 700px
+  color #fff
+  font-size rem(72)
+  font-family mediumFont
+  line-height 1.2
+
+.index-slider__product-info
+  display flex
+  margin-bottom 20px
+
+.product-info__item
+  margin-right 70px
+
+  &:last-child
+    margin-right 0
+
+.product-info__title
+  color goldColor
+  margin-bottom 15px
+  display block
+  font-size rem(16)
+  text-transform uppercase
+
+
+.product-info__line
+  display flex
+  align-items center
+  color #fff
+  margin-bottom 10px
+
+  &:last-child
+    margin-bottom 0
+
+  .icon
+    fill #fff
+    size(30px)
+    margin-right 20px
+
+.product-color
+  size(30px)
+  border-radius 50%
+
+.product-info__color
+  margin-right 20px
+
+  &:last-child
+    margin-right 0

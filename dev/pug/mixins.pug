@@ -1,0 +1,26 @@
+mixin icon(name,mod)
+  - mod = mod || ''
+  svg(class="icon icon-" + name + ' ' + mod)
+    use(xlink:href="static/img/svg/symbol/sprite.svg#" + name)
+
+mixin picMenuLink(link,title)
+  li.pic-menu-list__item
+    a.pic-menu-list__link(href= link)= title
+
+mixin popularLink(link,title,country)
+  li.popular-list__item
+    a.popular-list__link(href= link)= title
+    span.popular-list__country= country
+
+mixin socialLink(link,title,icon)
+  li.social-list__item
+    a.social-list__link(href= link)= title
+      +icon(icon)
+
+mixin paymentType(icon)
+  li.payment-type__item
+    +icon(icon)
+
+mixin footerNav(link,title)
+  li.footer-nav__item
+    a.footer-nav__link(href= link)= title

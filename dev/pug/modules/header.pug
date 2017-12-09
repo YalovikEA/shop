@@ -1,0 +1,39 @@
+header
+  .header-top
+    .container
+      .logo.header-logo
+        +icon('logo', 'header-logo__icon')
+
+      .header-nav
+
+        ul.header-nav__list
+          li.header-nav__item
+            a.header-nav__link.header-nav__link--phone(href="tel:+375332583694") +375 33 258-36-94
+          li.header-nav__item
+            a.header-nav__link(href) Обратный звонок
+          li.header-nav__item
+            a.header-nav__link(href) Адреса салонов
+
+        ul.header-nav__list
+          each object in nav.headerNavInfo
+            li.header-nav__item
+              +icon(object['icon'],'header-nav__icon')
+              a.header-nav__link(href= object['link'])= object['title']
+
+        ul.header-nav__list
+          each object in nav.headerNavConnect
+            li.header-nav__item
+              +icon(object['icon'],'header-nav__icon')
+              a.header-nav__link(href= object['link'])= object['title']
+
+        ul.header-nav__list.user__list
+          each object in nav.headerNavUser
+            li.header-nav__item.user__item
+              .user__icon
+                +icon(object['icon'])
+                span.user__count= object['number']
+              a.header-nav__link.user__link(href= object['link'])= object['title']
+
+  .header-menu
+    .container
+      include menu

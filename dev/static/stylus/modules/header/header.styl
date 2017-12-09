@@ -1,0 +1,87 @@
+.index-page
+  header
+    absolute($top:0,$left:0,$right:0)
+    z-index 10
+    background-color rgba(0,0,0, .5)
+
+header
+  background-color #000
+
+
+.header-top
+  .container
+    display flex
+    align-items flex-end
+    border-bottom 1px solid grayColor
+    padding 20px 0
+    margin-bottom 20px
+
+.header-logo
+  margin-right 60px
+
+.header-logo__icon
+  fill #fff
+  size(240px,130px)
+
+.header-nav
+  display flex
+  align-items flex-end
+  justify-content space-between
+  flex 1
+  padding-bottom 30px
+
+.header-nav__item
+  margin-bottom 10px
+
+  &:last-child
+    margin-bottom 0
+
+.header-nav__icon
+  size(17px)
+  fill #fff
+  margin-right 10px
+
+.header-nav__link
+  color #fff
+  font-size rem(15)
+  border-bottom 1px solid grayColor
+  font-family ind
+
+  &--phone
+    border-bottom none
+    font-size rem(20)
+
+.user__list
+  display flex
+
+.user__item
+  text-align center
+  margin-left 25px
+  margin-bottom 0
+
+  &:first-child
+    margin-left 40px
+
+.user__icon
+  display inline-block
+  position relative
+
+  .icon
+    fill #fff
+    size(30px)
+    margin-bottom 15px
+
+.user__link
+  display block
+  font-family ind
+
+.user__count
+  size(22px)
+  absolute($top:-12px,$right:-6px)
+  padding-top 3px
+  font-size rem(12)
+  color #fff
+  background-color red
+  border-radius 50%
+
+

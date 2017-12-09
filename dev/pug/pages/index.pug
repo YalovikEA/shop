@@ -1,0 +1,19 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Главная страница'
+  - var pageClass = 'index-page'
+
+block content
+  include index/slider
+  include index/pic-menu
+  include index/recommended
+  include index/popular
+  include index/video
+  include index/promo
+  include index/news
+  include index/subscribe
+  include index/advantages
+
+block script
+  script(src="https://www.youtube.com/iframe_api")
