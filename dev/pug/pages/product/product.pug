@@ -1,0 +1,34 @@
+section.product
+  .container
+    .product-content
+      .product-gallery
+      .product-info
+        h2.g-section-title.g-section-title--product Набор бокалов для красного вина, серия Frau, SCOTTZWIESEL
+        .product-fast-info
+          .product-specification
+            +productLineInfo('Артикул:','111-058-2')
+            +productLineInfo('Торговая марка:','SCOTT ZWIESEL (Германия)')
+            +productLineInfo('Серия:','Серия Frau')
+            ul.product-specification-list
+              +productSpecificationIcon('equal')
+              +productSpecificationIcon('favourite')
+              +productSpecificationIcon('basket')
+              +productSpecificationIcon('register')
+              +productSpecificationIcon('pan')
+              +productSpecificationIcon('resize')
+              +productSpecificationIcon('login')
+              +productSpecificationIcon('location')
+          .product-callback
+            +icon('location')
+            a.product-callback__phone(href="tel:8800150150") 8 800 150-150
+            a.product-callback__link(href="javascript:void(0);") Обратный звонок
+            span.product-callback__text Позвоните и наши консультанты свяжутся с вами
+
+        .product-price-info
+          span.product-price 635 &#8381;
+          .product-availability
+            +icon('favourite')
+            span Нет в наличии
+          .product-feedback
+            +icon('basket')
+            a(href="javascript:void(0);") Обратная связь

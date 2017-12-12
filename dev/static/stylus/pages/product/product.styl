@@ -1,0 +1,88 @@
+.product-content
+  display flex
+  justify-content space-between
+
+.product-gallery,
+.product-info
+  width 48%
+  flex-shrink 0
+
+.product-fast-info
+  display flex
+  justify-content space-between
+  margin-bottom 25px
+
+.product-specification
+  width 60%
+
+.product-specification-list
+  display flex
+
+.product-specification-list__item
+  margin-right 5px
+
+  &:last-child
+    margin-right 0
+
+  .icon
+    size(18px)
+
+.product-callback
+  position relative
+  padding-left 30px
+  width 35%
+
+  .icon
+    absolute($top:0,$left:0)
+    size(20px)
+
+.product-callback__phone
+  display block
+  margin-bottom 10px
+
+.product-callback__link
+  display inline-block
+  margin-bottom 10px
+  border-bottom 1px dotted grayColor
+
+span.product-callback__text
+  font-size rem(15)
+  line-height 1.3
+
+.product-line-info
+  margin-bottom 10px
+  font-size rem(15)
+
+  &:last-child
+    margin-bottom 20px
+
+.product-info-line__key
+  color goldColor
+  margin-right 5px
+
+
+.product-price-info
+  display flex
+  justify-content space-between
+  align-items flex-end
+
+  .product-price
+    font-family boldFont
+    font-size rem(32px)
+    line-height 1
+
+.product-price
+  font-family boldFont
+  margin-right 20px
+
+.product-availability
+  .icon
+    size(17px)
+    margin-right 10px
+
+.product-feedback
+  width 35%
+  .icon
+    size(17px)
+    margin-right 10px
+
