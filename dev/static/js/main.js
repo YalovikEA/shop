@@ -30,6 +30,7 @@ $(document).ready(function () {
   $('.js-product-gallery').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
+
     asNavFor: '.js-product-gallery-nav',
     prevArrow: '.product-gallery__controls--prev',
     nextArrow: '.product-gallery__controls--next'
