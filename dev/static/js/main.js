@@ -30,20 +30,19 @@ $(document).ready(function () {
   $('.js-product-gallery').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    fade: true,
     asNavFor: '.js-product-gallery-nav',
-    appendDots: '.product-gallery__nav',
     prevArrow: '.product-gallery__controls--prev',
     nextArrow: '.product-gallery__controls--next'
   });
 
   // Слайдер навигации продукта
   $('.js-product-gallery-nav').slick({
-    slidesToShow: 5,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    asNavFor: '.js-product-gallery',
+    arrows: false,
     focusOnSelect: true,
-    centerMode: true
+    centerMode: true,
+    asNavFor: '.js-product-gallery'
   });
 
   // Позиционируем управление слайдера на главной странице
