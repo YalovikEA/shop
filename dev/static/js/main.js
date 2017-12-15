@@ -26,6 +26,26 @@ $(document).ready(function () {
     },
   });
 
+  // Слайдер галлереи продукта
+  $('.js-product-gallery').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    asNavFor: '.js-product-gallery-nav',
+    appendDots: '.product-gallery__nav',
+    prevArrow: '.product-gallery__controls--prev',
+    nextArrow: '.product-gallery__controls--next'
+  });
+
+  // Слайдер навигации продукта
+  $('.js-product-gallery-nav').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.js-product-gallery',
+    focusOnSelect: true,
+    centerMode: true
+  });
+
   // Позиционируем управление слайдера на главной странице
   function sliderElemPos(elem,pos) {
     var windowWidth = $(window).width(),
