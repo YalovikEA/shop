@@ -33,3 +33,8 @@ mixin productLineInfo(key,val)
 mixin productSpecificationIcon(icon)
   li.product-specification-list__item
     +icon(icon)
+
+mixin share(icon, link, text)
+  .share-line
+    +icon(icon)
+    a(href= link)= text

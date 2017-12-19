@@ -73,9 +73,14 @@ section.product
           .product-action.product-action__compare
             +icon('register')
             a(href="javascript:void(0);") Сравнить
-          .product-action.product-action__share
+          .product-action.product-action__share.share
             +icon('resize')
-            a(href="javascript:void(0);") Сравнить
+            a(href="javascript:void(0);") Поделиться
+            .share-popup
+              +share('resize','javascript:void(0);','Скопировать ссылку')
+              +share('equal','javascript:void(0);','Отправить ссылку на почту')
+              +share('register','javascript:void(0);','Версия для печати')
+              +share('login','javascript:void(0);','Поделиться с друзьями')
 
         .product-line
           .product-delivery
