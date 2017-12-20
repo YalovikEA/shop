@@ -66,10 +66,19 @@ $(document).ready(function () {
   })
 });
 
+// Запуск видео с Utube
 $('.video-start').click(function () {
   var videoID = $(this).parent().parent().data('video-id'),
       videoPlayer = $(this).parent().parent().attr('id');
   player = new YT.Player(videoPlayer, {
     videoId: videoID
   });
+});
+
+
+// Табы продуктов
+$('.tabs-list__item').click(function () {
+  var tabName = $(this).attr('show-tab');
+  $(this).addClass('active').siblings().removeClass('active');
+  $('.tabs-content .' + tabName).addClass('active').siblings().removeClass('active');
 });

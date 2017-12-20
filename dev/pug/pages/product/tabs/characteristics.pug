@@ -1,0 +1,14 @@
+mixin charLine(key,val)
+  tr
+    td.product-characteristics__key
+      span= key
+    td.product-characteristics__val
+      span= val
+
+.tab-content__item.tab-characteristics.active
+  table.product-characteristics
+    +charLine('Вид упаковки','подарочная')
+    +charLine('Материал','хрустальное стекло')
+    +charLine('Объем','310 мл')
+    +charLine('Предметов в наборе','2 шт')
+    +charLine('Торговая марка','viollin')

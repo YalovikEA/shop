@@ -1,0 +1,48 @@
+.tabs-list
+  display flex
+  position relative
+  align-items center
+  margin-bottom 30px
+
+  &::before
+    content ""
+    display block
+    absolute($right:0,$left:0,$top:50%)
+    height 1px
+    margin-top -0.5px
+    background-color lighten(grayColor, 70%)
+    z-index 0
+
+.tabs-list__item
+  margin-right 10px
+  position relative
+  z-index 1
+  cursor pointer
+  height 40px
+  line-height @height
+  padding 0 10px
+  transition all linear .2s
+  background-color #fff
+
+  &:last-child
+    margin-right 0
+
+  &.active,
+  &:hover
+    background-color lighten(grayColor, 70%)
+
+  &.active
+    font-family boldFont
+
+    .tabs-list__text
+      border-bottom 0
+
+.tabs-list__text
+  border-bottom 1px dotted grayColor
+  text-transform uppercase
+
+.tab-content__item
+  display none
+
+  &.active
+    display block
