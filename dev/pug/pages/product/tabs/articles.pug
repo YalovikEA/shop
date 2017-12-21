@@ -1,1 +1,21 @@
+mixin articlesItem(img,date,title,text)
+  .product-articles__item
+      .product-articles__img(style=`background-image:url('${img}')`)
+      .product-articles__content
+        .product-articles__date
+          +icon('date')
+          span= date
+        h3.g-block-title= title
+        p.product-articles__text= text
+        a.product-articles__link(href="javaskript:void(0);") Подробнее
+
+
 .tab-content__item.tab-articles
+  .product-articles
+    +articlesItem('static/img/content/articles/article1/article1.jpg','4 ноября 2016','Соковарка: готовим соки на зиму','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.')
+
+    +articlesItem('static/img/content/articles/article2/article2.jpg','3 октября 2016','Бассейн: для дальних заплывов','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+
+    +articlesItem('static/img/content/articles/article3/article3.jpg','25 мая 2014','Холодильник: чтоб морозил','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem fafLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt utLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut')
+
+    +articlesItem('static/img/content/articles/article4/article4.jpg','15 аперля 2015','Дрель: для сверления стен','abore et dolore magna aliqua. lorem fafLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt utLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut')
