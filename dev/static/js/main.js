@@ -75,7 +75,6 @@ $('.video-start').click(function () {
   });
 });
 
-
 // Табы продуктов
 $('.tabs-list__item').click(function () {
   var tabName = $(this).attr('show-tab');
