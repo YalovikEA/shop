@@ -82,3 +82,14 @@ $('.tabs-list__item').click(function () {
   $(this).addClass('active').siblings().removeClass('active');
   $('.tabs-content .' + tabName).addClass('active').siblings().removeClass('active');
 });
+
+// Вопрос-Ответ
+$(document).on('click','.faq__title',function() {
+  $(this).parent().toggleClass('active');
+  var faqContent = $(this).siblings();
+  if(faqContent.is(':visible')){
+    faqContent.slideUp();
+  }else {
+    faqContent.slideDown();
+  }
+})
