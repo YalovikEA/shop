@@ -1,0 +1,15 @@
+mixin youSee(img,text)
+  .you-see__item
+    img.you-see__img(src=`${img}`)
+    a.you-see__link(href="javascript:void(0);")= text
+
+
+section.you-see
+  .container
+    h2.g-section-title Вы недавно смотрели
+    .you-see__content
+      +youSee('static/img/content/you-see/product1.jpg','Lorem ipsum dolor sit amet, tetur adipisicing elit, sed do')
+      +youSee('static/img/content/you-see/product2.jpg','labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
+      +youSee('static/img/content/you-see/product3.jpg','incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris')
+      +youSee('static/img/content/you-see/product4.jpg','sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.')
+
