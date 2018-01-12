@@ -1,0 +1,103 @@
+.add-review__line
+  display flex
+  background-color lighten(grayColor, 70%)
+  padding 25px 30px
+
+.review-stars--set
+  .review-star
+    cursor pointer
+
+
+.review-stars
+  display flex
+
+.review-star
+  margin 0 5px
+
+  .icon
+    size(23px)
+    fill transparent
+    stroke goldColor
+
+  &.active
+
+    .icon
+      fill goldColor
+
+.add-review
+  margin-right 30px
+
+  .g-btn
+    width 100%
+    font-family boldFont
+
+.your-review,
+.review-middle__line
+  display flex
+  align-items center
+  margin-bottom 15px
+
+.review-mini-title
+  font-family boldFont
+  margin-right 15px
+
+.review-mark
+  margin-left 10px
+
+.review
+  padding 40px 0 40px 90px
+  position relative
+  border-bottom 1px solid lighten(grayColor, 70%)
+
+  &:last-child
+    border-bottom 0
+    padding-bottom 0
+
+.review-photo
+  absolute($top:40px,$left:0)
+  size(60px)
+
+  span
+    display none
+    absolute-center()
+    font-size rem(15px)
+    color goldColor
+
+  &.review-photo--no
+    border 1px solid lighten(grayColor, 70%)
+
+    span
+      display block
+      text-align center
+
+.review-content__top
+  display flex
+  justify-content flex-end
+  align-items center
+  margin-bottom 25px
+
+.review-author
+  margin-right auto
+  font-family boldFont
+
+.review-date
+  margin-left 30px
+
+  .icon
+    size(16px)
+    margin-right 10px
+
+.review-text-block
+  display flex
+
+  &:first-of-type
+    margin-bottom 30px
+
+.review-comment__title
+  font-size rem(15)
+  color goldColor
+  flex-shrink 0
+  width 120px
+
+.review-text
+  line-height 1.3

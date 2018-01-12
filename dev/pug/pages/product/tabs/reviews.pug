@@ -1,2 +1,99 @@
 .tab-content__item.tab-reviews
+  .product-reviews
+    .add-review__line
+      .add-review
+        .your-review
+          span.review-mini-title Ваша оценка
+          .review-stars.review-stars--set
+            - var val = 0
+            while val < 5
+              .review-star(data-rating=val++)
+                +icon('star')
+        a.g-btn.g-btn--black.g-btn--no-under(href="javascript:void(0);") Добавить отзыв
 
+      .product-reviews__info
+        .review-middle__line
+          span.review-mini-title Средняя оценка
+          .review-stars
+            - var val = 0
+            while val < 5
+              .review-star(data-rating=val++).active
+                +icon('star')
+          span.review-mini-title.review-mark 4.2
+        span.review-count Всего оценки 3
+
+    .review
+      .review-photo(style="background-image:url('static/img/content/review/review3.jpg')")
+      .review-content
+        .review-content__top
+          span.review-author Уваров Святослав Михайлович
+          .review-stars
+            - var val = 0
+            while val < 5
+              .review-star(data-rating=val++).active
+                +icon('star')
+          .review-date
+            +icon('date')
+            span 27 августа 2016
+        .review-text-block.review-text-block--plus
+          span.review-comment__title Достоинства
+          p.review-text Кино — это фиксация эпохи — со своими героями, маркерами и особенностями. Никита Лаврецкий фиксирует ее с 15 лет, а к 23 превратился в одного из самых обсуждаемых белорусских режиссеров. Хотя бы потому, что снимает фильмы на языке своих сверстников. В рубрике «Поколение» говорим с Никитой про удивительных и смешных людей, признаки странной эпохи и вкусы белорусского зрителя.
+        .review-text-block.review-text-block--minus
+          span.review-comment__title Недостатки
+          p.review-text Нет
+
+    .review
+      .review-photo.review-photo--no
+        span Нет фото
+      .review-content
+        .review-content__top
+          span.review-author Петров Иван Михайлович
+          .review-stars
+              .review-star.active
+                +icon('star')
+              .review-star.active
+                +icon('star')
+              .review-star
+                +icon('star')
+              .review-star
+                +icon('star')
+              .review-star
+                +icon('star')
+          .review-date
+            +icon('date')
+            span 04 марта 2016
+        .review-text-block.review-text-block--plus
+          span.review-comment__title Достоинства
+          p.review-text Нет
+        .review-text-block.review-text-block--minus
+          span.review-comment__title Недостатки
+          p.review-text Кино — это фиксация эпохи — со своими героями, маркерами и особенностями. Никита Лаврецкий фиксирует ее с 15 лет, а к 23 превратился в одного из самых обсуждаемых белорусских режиссеров.
+
+
+    .review
+      .review-photo(style=`background-image:url('static/img/content/review/review4.jpg')`)
+      .review-content
+        .review-content__top
+          span.review-author Петров Иван Михайлович
+          .review-stars
+            - var val = 0
+            while val < 5
+              .review-star(data-rating=val++).active
+                +icon('star')
+              .review-star(data-rating=val++).active
+                +icon('star')
+              .review-star(data-rating=val++).active
+                +icon('star')
+              .review-star(data-rating=val++)
+                +icon('star')
+              .review-star(data-rating=val++)
+                +icon('star')
+          .review-date
+            +icon('date')
+            span 17 марта 2016
+        .review-text-block.review-text-block--plus
+          span.review-comment__title Достоинства
+          p.review-text Кино — это фиксация эпохи — со своими героями, маркерами и особенностями. Никита Лаврецкий фиксирует ее с 15 лет, а к 23 превратился в одного из самых обсуждаемых белорусских режиссеров.
+        .review-text-block.review-text-block--minus
+          span.review-comment__title Недостатки
+          p.review-text Никита Лаврецкий фиксирует ее с 15 лет, а к 23 превратился в одного из самых обсуждаемых белорусских режиссеров.

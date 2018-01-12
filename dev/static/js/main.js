@@ -91,4 +91,91 @@ $(document).on('click','.faq__title',function() {
   }else {
     faqContent.slideDown();
   }
-})
+});
+
+
+// Рейтинг
+function rating(elem) {
+  var ratingLine = $('.review-stars--set .review-star');
+  ratingLine.removeClass('active');
+  elem.addClass('active');
+
+  for (var i = 0, rLen = ratingLine.length; i < rLen; i++) {
+    if($(ratingLine[i]).hasClass('active')) {
+      break;
+    }
+    $(ratingLine[i]).addClass('active');
+  }
+}
+
+$('.review-stars--set .review-star').click(function () {
+  var cur = $(this),
+      ratingLine = $('.review-stars--set .review-star');
+  ratingLine.removeClass('click-active');
+  rating(cur);
+  cur.addClass('click-active');
+});
+
+$('.review-stars--set .review-star')
+  .mouseover(function() {
+    var cur = $(this);
+    rating(cur);
+    cur.addClass('active');
+  })
+  .mouseout(function() {
+    var ratingLine = $('.review-stars--set .review-star');
+    ratingLine.addClass('active');
+
+
+    for (var i = 5; i > 0; i--) {
+      if($(ratingLine[i]).hasClass('click-active')) {
+        break;
+      }
+      $(ratingLine[i]).removeClass('active');
+    }
+  });
+
+// Фильтр
+$(document).on('click','.filter-tab__link,.filter-hide-more',function() {
+  var content = $('.filter-line--bottom');
+  var filterArrow = $('.filter-hide-more');
+  content.toggleClass('active');
+  filterArrow.toggleClass('active');
+  if(content.is(':visible')){
+    content.slideUp();
+    filterArrow.removeClass('active');
+  }else {
+    content.slideDown();
+    filterArrow.addClass('active')
+  }
+});
+
+// Слайдер значений
+var rangeSlider = $('.range-slider');
+
+for (var i = 0; i < rangeSlider.length; i++) {
+  noUiSlider.create(rangeSlider[i], {
+    start: [2000, 8000],
+    connect: true,
+    padding: 10,
+    range: {
+      'min': 1000,
+      'max': 10000
+    },
+    format: wNumb({
+      decimals: 0
+    })
+  });
+
+  rangeSlider[i].noUiSlider.on('update', function (values, handle) {
+
+    var value = values[handle],
+      fromNumber = this.target.nextElementSibling.firstElementChild.lastElementChild,
+      toNumber = this.target.nextElementSibling.children[1].lastElementChild;
+    if (handle) {
+      toNumber.value = value;
+    } else {
+      fromNumber.value = value;
+    }
+  });
+}

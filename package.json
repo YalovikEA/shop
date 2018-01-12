@@ -31,8 +31,10 @@
   },
   "dependencies": {
     "normalize.css": "^7.0.0",
+    "nouislider": "^10.1.0",
     "slick-carousel": "^1.8.1",
-    "svg4everybody": "^2.1.8"
+    "svg4everybody": "^2.1.8",
+    "wnumb": "^1.1.0"
   },
   "optionalDependencies": {}
 }

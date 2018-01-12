@@ -1,0 +1,22 @@
+extends ../layout/common
+
+block variables
+  - var title = 'Каталог продукта'
+  - var pageClass = 'catalog-page'
+
+block content
+  section.breadcrumbs
+    .container
+      ul.breadcrumbs-list
+        li.breadcrumbs-list__item
+          a.breadcrumbs-list__link(href="javascript:void(0);") Главная
+        li.breadcrumbs-list__item
+          a.breadcrumbs-list__link(href="javascript:void(0);") Хранение вина
+
+  include ../modules/filter
+  include catalog/catalog-result/catalog-result
+  include catalog/brands
+  include catalog/promo
+
+block script
+

@@ -1,0 +1,189 @@
+mixin filterPriceLink(price)
+  li.filter-range__item
+    a.filter-range__link(href="javascript:void(0);")= price
+
+mixin colorCheck(bg)
+  li.filter-color__item
+    label.filter-color__check
+      input(type="checkbox")
+      .filter-color(style= bg)
+        .filter-color__icon
+          +icon('check')
+
+mixin brandsItem(title)
+  li.filter-checkbox__item
+    label.checkbox
+      | #{title}
+
+      input(type="checkbox")
+      .checkbox-custom
+        +icon('check')
+
+
+section.filter-section
+  .container
+    h2.g-section-title Винные шкафы
+    .filter
+      .filter-hide-more
+        +icon('down')
+      .filter-count-res
+        span Выбрано
+        span.count-res__number 245 моделей
+      .filter-line.filter-line--top
+
+        .filter-top__item.filter-top__item--price
+          span.filter-item__title Стоимость
+          ul.filter-range__list
+            +filterPriceLink('от 50 тыс. руб.')
+            +filterPriceLink('от 500 тыс. руб.')
+            +filterPriceLink('от 1 млн. руб.')
+          .filter-range
+            .range-slider
+            .filter-range__text
+              .filter-range__val.filter-range__val--from
+                span от
+                input(type="text").filter-input
+              .filter-range__val.filter-range__val--to
+                span до
+                input(type="text").filter-input
+              span руб.
+
+        .filter-top__item.filter-top__item--color
+          span.filter-item__title Цвет
+          ul.filter-color__list
+            +colorCheck('background-color: red')
+            +colorCheck('background-color: blue')
+            +colorCheck('background: linear-gradient(to bottom, #f0b7a1 0%,#8c3310 50%,#752201 51%,#bf6e4e 100%)')
+            +colorCheck('background: linear-gradient(to bottom, #b8e1fc 0%,#a9d2f3 10%,#90bae4 25%,#90bcea 37%,#90bff0 50%,#6ba8e5 51%,#a2daf5 83%,#bdf3fd 100%)')
+            +colorCheck('background-color: orange')
+            +colorCheck('background: linear-gradient(to bottom, #d8e0de 0%,#aebfbc 22%,#99afab 33%,#8ea6a2 50%,#829d98 67%,#4e5c5a 82%,#0e0e0e 100%);')
+            +colorCheck('background-color: yellow')
+            +colorCheck('background-color: brown')
+
+          label.checkbox.checkbox--bold
+            | Бесплатное подключение
+            input(type="checkbox")
+            .checkbox-custom
+              +icon('check')
+
+        .filter-top__item.filter-top__item--brands
+          span.filter-item__title Бренды
+          ul.filter-checkbox__list
+            +brandsItem('Все бренды')
+            +brandsItem('IP')
+            +brandsItem('Electrolux')
+            +brandsItem('Samsung')
+            +brandsItem('Liebher')
+            +brandsItem('Ariston')
+            +brandsItem('Bosh')
+            +brandsItem('AEG')
+            +brandsItem('V-Gus')
+            +brandsItem('Zanussi')
+            +brandsItem('Caterpillar')
+            +brandsItem('Other')
+
+      .filter-line.filter-line--bottom(style="display:none")
+        .filter-bottom__item.filter-bottom__item--count
+          span.filter-item__title Количество температурных зон
+          ul.filter-checkbox__list
+            +brandsItem('1')
+            +brandsItem('2')
+            +brandsItem('3')
+
+          span.filter-item__title Количество камер
+          ul.filter-checkbox__list
+            +brandsItem('1')
+            +brandsItem('2')
+            +brandsItem('3')
+            +brandsItem('4')
+
+        .filter-bottom__item.filter-bottom__item--features
+          span.filter-item__title Особенности
+          ul.filter-checkbox__list
+            +brandsItem('Защита от детей')
+            +brandsItem('Фильтр из активированного угля')
+            +brandsItem('Антибактериальное покрытие')
+            +brandsItem('Цифровой термометр')
+
+        .filter-bottom__item.filter-bottom__item--type
+          span.filter-item__title Тип
+          ul.filter-checkbox__list
+            +brandsItem('Монотемпературный')
+            +brandsItem('Двухтемпературный')
+            +brandsItem('Мультитемпературный')
+
+        .filter-bottom__item.filter-bottom__item--location
+          span.filter-item__title Расположение
+          ul.filter-checkbox__list
+            +brandsItem('Встраиваемый')
+            +brandsItem('Отдельностоящий')
+
+      .filter-line.filter-line--bottom(style="display:none")
+        .filter-bottom__item.filter-bottom__item--width
+          span.filter-item__title Ширина
+          ul.filter-range__list
+            +filterPriceLink('Стандартная')
+            +filterPriceLink('Высокая')
+          .filter-range
+            .range-slider
+            .filter-range__text
+              .filter-range__val.filter-range__val--from
+                span от
+                input(type="text").filter-input
+              .filter-range__val.filter-range__val--to
+                span до
+                input(type="text").filter-input
+              span см
+
+        .filter-bottom__item.filter-bottom__item--height
+          span.filter-item__title Высота
+          ul.filter-range__list
+            +filterPriceLink('Низкая')
+            +filterPriceLink('Средняя')
+            +filterPriceLink('Высокая')
+          .filter-range
+            .range-slider
+            .filter-range__text
+              .filter-range__val.filter-range__val--from
+                span от
+                input(type="text").filter-input
+              .filter-range__val.filter-range__val--to
+                span до
+                input(type="text").filter-input
+              span см
+
+        .filter-bottom__item.filter-bottom__item--depth
+          span.filter-item__title Глубина
+          ul.filter-range__list
+            +filterPriceLink('Стандартная')
+            +filterPriceLink('Глубокая')
+          .filter-range
+            .range-slider
+            .filter-range__text
+              .filter-range__val.filter-range__val--from
+                span от
+                input(type="text").filter-input
+              .filter-range__val.filter-range__val--to
+                span до
+                input(type="text").filter-input
+              span см
+
+        .filter-bottom__item.filter-bottom__item--capacity
+          span.filter-item__title Вместимость
+            span.filter-item__title.filter-item__title--small (бутылки 0.75л)
+          ul.filter-range__list
+            +filterPriceLink('Стандартная')
+            +filterPriceLink('Высокая')
+          .filter-range
+            .range-slider
+            .filter-range__text
+              .filter-range__val.filter-range__val--from
+                span от
+                input(type="text").filter-input.filter-input--from
+              .filter-range__val.filter-range__val--to
+                span до
+                input(type="text").filter-input.filter-input--to
+              span см
+
+    .filter-tab
+      a.filter-tab__link(href="javascript:void(0);") Расширенный фильтр
