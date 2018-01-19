@@ -1,0 +1,96 @@
+.catalog-view__item
+  .catalog-view__img
+    img(src="static/img/content/products/catalog/product1/product1.jpg")
+    a.g-btn.g-btn--border-black.product-prev-popup__link(href="#prev-product-popup") Быстрый просмотр
+  .catalog-view__slider
+    .js-catalog-view__slider
+      +catalogSliderItem('1','1')
+      +catalogSliderItem('1','2')
+      +catalogSliderItem('1','3')
+      +catalogSliderItem('1','4')
+      +catalogSliderItem('1','5')
+      +catalogSliderItem('1','6')
+      +catalogSliderItem('1','7')
+      +catalogSliderItem('1','8')
+      +catalogSliderItem('1','9')
+      +catalogSliderItem('1','10')
+      +catalogSliderItem('1','11')
+
+  .product-prev__content
+    a.product-prev__title(href="javascript:void(0);") Винный шкаф Liebherr WKe Ft500
+    .product-prev__middle-content
+      .product-prev__middle-content-left
+        .product-lines-info
+          .product-line-info
+            span.product-info-line__key Артикул:
+            span.product-info-line__val 145-225
+          .product-line-info.product-line-info--prev
+            span.product-info-line__key Торговая марка:
+            span.product-info-line__val Liebherr (Germany)
+          .product-line-info
+            span.product-info-line__key Высота:
+            span.product-info-line__val 210 см
+          .product-line-info
+            span.product-info-line__key Ширина:
+            span.product-info-line__val 60 см
+          .product-line-info
+            span.product-info-line__key Защита от детей:
+            span.product-info-line__val есть
+        ul.product-specification-list
+          +productSpecificationIcon('equal')
+          +productSpecificationIcon('favourite')
+          +productSpecificationIcon('basket')
+          +productSpecificationIcon('register')
+          +productSpecificationIcon('pan')
+          +productSpecificationIcon('resize')
+          +productSpecificationIcon('login')
+          +productSpecificationIcon('check')
+        .product-prev__link
+          a(href="product.html") Подробнее о товаре
+
+        .product-actions.product-actions--2col
+          .product-action.product-action__favourite
+            +icon('equal')
+            a(href="javascript:void(0);") В избранное
+          .product-action.product-action__compare
+            +icon('register')
+            a(href="javascript:void(0);") Сравнить
+          .product-action.product-action__share.share
+            +icon('resize')
+            a(href="javascript:void(0);") Поделиться
+            .share-popup
+              +share('resize','javascript:void(0);','Скопировать ссылку')
+              +share('equal','javascript:void(0);','Отправить ссылку на почту')
+              +share('register','javascript:void(0);','Версия для печати')
+              +share('login','javascript:void(0);','Поделиться с друзьями')
+
+        .product-prev__line-price
+          span.product-price 155 000 &#8381;
+          .product-availability
+            +icon('check')
+            span Есть в наличии
+
+      .product-prev__middle-content-right
+          .product-prev__text
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, eligendi tempora odit natus eveniet sequi, iste a molestias soluta nihil numquam laudantium voluptas ipsa quia laboriosam, doloremque itaque ratione architecto!
+            a.product-prev__text-link(href="product.html") Подробнее
+    .product-btn
+      a.g-btn.g-btn--border-black.g-btn--no-underline.g-btn-buy(href="javascript:void(0);") В корзину
+      a.g-btn.g-btn--border-black.g-btn--no-underline.g-btn-click(href="javascript:void(0);") Купить в 1 клик
+
+    .product-actions.product-actions--lines
+      .product-action.product-action__favourite
+        +icon('equal')
+        a(href="javascript:void(0);") В избранное
+      .product-action.product-action__compare
+        +icon('register')
+        a(href="javascript:void(0);") Сравнить
+      .product-action.product-action__share.share
+        +icon('resize')
+        a(href="javascript:void(0);") Поделиться
+        .share-popup
+          +share('resize','javascript:void(0);','Скопировать ссылку')
+          +share('equal','javascript:void(0);','Отправить ссылку на почту')
+          +share('register','javascript:void(0);','Версия для печати')
+          +share('login','javascript:void(0);','Поделиться с друзьями')

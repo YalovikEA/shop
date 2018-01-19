@@ -45,6 +45,20 @@ $(document).ready(function () {
     asNavFor: '.js-product-gallery'
   });
 
+  //Слайдер каталога продукта
+  // $(document).on('click',.sort-view__item').slick('reinit');
+  $('.js-catalog-view__slider').slick({
+    lazyLoad: 'ondemand',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    customPaging : function(slider, i) {
+      var thumb = $(slider.$slides[i]).data('thumb');
+      return '<a><img src="'+thumb+'"></a>';
+    },
+  });
+
   // Позиционируем управление слайдера на главной странице
   function sliderElemPos(elem,pos) {
     var windowWidth = $(window).width(),
@@ -76,11 +90,20 @@ $('.video-start').click(function () {
 });
 
 // Табы продуктов
-$('.tabs-list__item').click(function () {
+$(document).on('click','.tabs-list__item', function () {
   var tabName = $(this).attr('show-tab');
+  if ($(this).parents().hasClass('tabs-list--for-customer')) {
+    window.location.href = '#' + tabName;
+  }
   $(this).addClass('active').siblings().removeClass('active');
   $('.tabs-content .' + tabName).addClass('active').siblings().removeClass('active');
 });
+
+// $('.tabs-list__item').click(function () {
+//   var tabName = $(this).attr('show-tab');
+//   $(this).addClass('active').siblings().removeClass('active');
+//   $('.tabs-content .' + tabName).addClass('active').siblings().removeClass('active');
+// });
 
 // Вопрос-Ответ
 $(document).on('click','.faq__title',function() {
@@ -178,4 +201,29 @@ for (var i = 0; i < rangeSlider.length; i++) {
       fromNumber.value = value;
     }
   });
-}
+};
+
+$(document).on('click','.sort-view__item',function () {
+  var catView = $(this).data('catalog-view');
+  $(this).siblings().removeClass('active');
+  $(this).addClass('active');
+  $('.catalog-view').removeClass().addClass('catalog-view catalog-view--'+catView);
+  // Для отображения слайдера после display:none -> display:block
+  $('.js-catalog-view__slider').slick('setPosition');
+});
+
+
+// Каталог попап
+$(document).ready(function () {
+  $('.product-prev-popup__link').magnificPopup({
+    callbacks: {
+      open: function () {
+        $('.js-catalog-view__slider').slick('setPosition');
+      }
+    }
+  });
+  // Для отображения слайдера после display:none -> display:block
+  // if ($(document).on('click','.product-prev-popup__link',function (){
+  //   $('.js-catalog-view__slider').slick('setPosition');
+  // }));
+});

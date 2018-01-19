@@ -1,0 +1,64 @@
+.product-prev-popup.mfp-hide#prev-product-popup
+  .catalog-view__slider
+    .js-catalog-view__slider
+      +catalogSliderItem('1','1')
+      +catalogSliderItem('1','2')
+      +catalogSliderItem('1','3')
+      +catalogSliderItem('1','4')
+      +catalogSliderItem('1','5')
+      +catalogSliderItem('1','6')
+      +catalogSliderItem('1','7')
+      +catalogSliderItem('1','8')
+      +catalogSliderItem('1','9')
+      +catalogSliderItem('1','10')
+      +catalogSliderItem('1','11')
+  .product-info
+    h2.g-section-title.g-section-title--product Набор бокалов для красного вина, серия Frau, SCOTTZWIESEL
+    .product-fast-info
+      .product-specification
+        +productLineInfo('Артикул:','111-058-2')
+        +productLineInfo('Торговая марка:','SCOTT ZWIESEL (Германия)')
+        +productLineInfo('Серия:','Серия Frau')
+        ul.product-specification-list
+          +productSpecificationIcon('equal')
+          +productSpecificationIcon('favourite')
+          +productSpecificationIcon('basket')
+          +productSpecificationIcon('register')
+          +productSpecificationIcon('pan')
+          +productSpecificationIcon('resize')
+          +productSpecificationIcon('login')
+          +productSpecificationIcon('location')
+      .product-callback
+        +icon('location')
+        a.product-callback__phone(href="tel:8800150150") 8 800 150-150
+        a.product-callback__link(href="javascript:void(0);") Обратный звонок
+        span.product-callback__text Позвоните и наши консультанты свяжутся с вами
+
+    .product-price-info
+      span.product-price 635 &#8381;
+      .product-availability
+        +icon('favourite')
+        span Нет в наличии
+      .product-feedback
+        +icon('basket')
+        a(href="javascript:void(0);") Обратная связь
+
+    .product-buttons
+      a.g-btn.g-btn--black(href="javascript:void(0);") Добавить в корзину
+      a.g-btn.g-btn--border-black(href="javascript:void(0);") Купить в 1 клик
+
+    .product-actions
+      .product-action.product-action__favourite
+        +icon('equal')
+        a(href="javascript:void(0);") В избранное
+      .product-action.product-action__compare
+        +icon('register')
+        a(href="javascript:void(0);") Сравнить
+      .product-action.product-action__share.share
+        +icon('resize')
+        a(href="javascript:void(0);") Поделиться
+        .share-popup
+          +share('resize','javascript:void(0);','Скопировать ссылку')
+          +share('equal','javascript:void(0);','Отправить ссылку на почту')
+          +share('register','javascript:void(0);','Версия для печати')
+          +share('login','javascript:void(0);','Поделиться с друзьями')

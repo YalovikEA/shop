@@ -1,0 +1,24 @@
+//- mixin tabsLink(dataShow,text)
+//-   li.tabs-list__item(show-tab= dataShow)&attributes(attributes)
+//-     span.tabs-list__text= text
+
+
+//- section.for-customer-tabs
+//-   .container
+//-     h2.g-section-title Для покупателя
+//-     .tabs
+//-       ul.tabs-list.tabs-list--for-customer
+//-         +tabsLink('tab-order', 'Как заказать')(class="active")
+//-         +tabsLink('tab-delivery', 'Доставка и получение')
+//-         +tabsLink('tab-payment', 'Оплата')
+//-         +tabsLink('tab-guarantee', 'Гарантия')
+//-         +tabsLink('tab-return', 'Возврат')
+//-         +tabsLink('tab-exchange', 'Обмен товаров')
+
+//-       .tabs-content
+//-         include tabs/order
+//-         include tabs/delivery
+//-         include tabs/payment
+//-         include tabs/guarantee
+//-         include tabs/return
+//-         include tabs/exchange

@@ -6,6 +6,41 @@
   justify-content flex-start
   flex-wrap wrap
 
+  .product-specification-list,
+  .catalog-view__slider,
+  .product-actions,
+  .g-btn-click
+    display none
+
+  .product-actions
+    margin-bottom 20px
+
+    .product-action__share
+      display none
+
+  .product-prev__text
+    display none
+
+    p
+      margin-bottom 15px
+      line-height 1.3
+
+  .product-prev__link
+    display none
+    margin-bottom 15px
+
+    a
+      border-bottom 1px solid grayColor
+
+  .product-line-info
+    display none
+
+    &.product-line-info--prev
+      display flex
+
+.product-prev__text-link
+  border-bottom 1px solid grayColor
+
 .catalog-view__item
   width 24%
   flex-shrink 0
@@ -36,6 +71,38 @@
   &:hover
     .g-btn
       opacity 1
+
+.catalog-view__slider
+
+  .slick-track
+    margin-bottom 20px
+
+  .slick-dots
+    li
+      position relative
+      display inline-block
+      size(42px)
+      margin 0 1px 2px
+      border 2px solid lighten(grayColor, 60%)
+      overflow hidden
+      cursor pointer
+
+      &.slick-active
+        border-color blackColor
+
+    img
+      display block
+      absolute-center()
+      width 100%
+      height auto
+
+.catalog-view__slider-item
+
+  img
+    margin 0 auto
+    width 100%
+    height auto
+    display block
 
 .catalog-nav
   position relative

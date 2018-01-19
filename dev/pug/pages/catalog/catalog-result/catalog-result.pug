@@ -5,9 +5,21 @@ mixin catalogViewItem(img, title, key, val, price, availability)
       span.g-btn.g-btn--border-black Быстрый просмотр
     .product-prev__content
       a.product-prev__title(href="javascript:void(0);")= title
-      .product-line-info
-        span.product-info-line__key= key
-        span.product-info-line__val= val
+      .product-lines-info
+        .product-line-info
+          span.product-info-line__key= key
+          span.product-info-line__val= val
+      ul.product-specification-list
+        +productSpecificationIcon('equal')
+        +productSpecificationIcon('favourite')
+        +productSpecificationIcon('basket')
+        +productSpecificationIcon('register')
+        +productSpecificationIcon('pan')
+        +productSpecificationIcon('resize')
+        +productSpecificationIcon('login')
+        +productSpecificationIcon('check')
+      .product-prev__link
+        a(href="product.html") Подробнее о товаре
       .product-prev__line-price
         span.product-price!= `${price} &#8381;`
         if(availability === 'Есть в наличии')
@@ -18,93 +30,20 @@ mixin catalogViewItem(img, title, key, val, price, availability)
           .product-availability
             +icon('down')
             span Под заказ
-    .product-btn
-      a.g-btn.g-btn--border-black.g-btn--no-underline(href="javascript:void(0);") В корзину
-  //- .catalog-view__item
-  //-   .catalog-view__img
-  //-     img(src=`static/img/content/products/catalog/${img}`)
-  //-     span.g-btn.g-btn--border-black Быстрый просмотр
-  //-   .product-prev__content
-  //-     a.product-prev__title(href="javascript:void(0);")= title
-  //-     .product-line-info
-  //-       span.product-info-line__key= key
-  //-       span.product-info-line__val= val
-  //-     .product-prev__line-price
-  //-       span.product-price!= `${price} &#8381;`
-  //-       .product-availability
-  //-         +icon('check')
-  //-         span= available
-  //-   .product-btn
-  //-     a.g-btn.g-btn--border-black.g-btn--no-underline(href="javascript:void(0);") В корзину
+      .product-btn
+        a.g-btn.g-btn--border-black.g-btn--no-underline.g-btn-buy(href="javascript:void(0);") В корзину
+        a.g-btn.g-btn--border-black.g-btn--no-underline(href="javascript:void(0);") Купить в 1 клик
 
 section.catalog-result
   .container
     include catalog-sort
     .catalog-view
-      +catalogViewItem('product2/product2.jpg',
-      'Винный шкаф Ariston WKEs 553 GrandCry',
-      'Торговая марка',
-      'Liebherr (Germany)',
-      '250 322',
-      'Есть в наличии')
-
-      +catalogViewItem('product3/product3.jpg',
-      'Винный шкаф Ariston WKEs 553 GrandCry',
-      'Торговая марка',
-      'Liebherr (Germany)',
-      '250 322')
-
-      +catalogViewItem('product4/product4.jpg',
-      'Винный шкаф Ariston WKEs 553 GrandCry',
-      'Торговая марка',
-      'Liebherr (Germany)',
-      '250 322')
-
-      +catalogViewItem('product1/product1.jpg',
-      'Винный шкаф Liebherr WKEs 553 GrandCry',
-      'Торговая марка',
-      'Liebherr (Germany)',
-      '274 150')
-
-      +catalogViewItem('product3/product3.jpg',
-      'Винный шкаф Ariston WKEs 553 GrandCry',
-      'Торговая марка',
-      'Liebherr (Germany)',
-      '250 322',
-      'Есть в наличии')
-
-      +catalogViewItem('product4/product4.jpg',
-      'Винный шкаф Ariston WKEs 553 GrandCry',
-      'Торговая марка',
-      'Liebherr (Germany)',
-      '250 322')
-
-      +catalogViewItem('product2/product2.jpg',
-      'Винный шкаф Ariston WKEs 553 GrandCry',
-      'Торговая марка',
-      'Liebherr (Germany)',
-      '250 322',
-      'Есть в наличии')
-
-      +catalogViewItem('product1/product1.jpg',
-      'Винный шкаф Liebherr WKEs 553 GrandCry',
-      'Торговая марка',
-      'Liebherr (Germany)',
-      '274 150')
-
-      +catalogViewItem('product3/product3.jpg',
-      'Винный шкаф Ariston WKEs 553 GrandCry',
-      'Торговая марка',
-      'Liebherr (Germany)',
-      '250 322',
-      'Есть в наличии')
-
-      +catalogViewItem('product4/product4.jpg',
-      'Винный шкаф Ariston WKEs 553 GrandCry',
-      'Торговая марка',
-      'Liebherr (Germany)',
-      '250 322')
-
+      include ../../product/product1.pug
+      include ../../product/product1.pug
+      include ../../product/product1.pug
+      include ../../product/product1.pug
+      include ../../product/product1.pug
+      include ../../product/product1.pug
 
     .catalog-nav
       a.g-btn.g-btn--black.g-btn--no-underline(href="javascript:void(0);") Показать еще

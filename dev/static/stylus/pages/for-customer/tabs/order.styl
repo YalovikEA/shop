@@ -1,0 +1,11 @@
+.page-banner--order
+  background-image url('../img/general/page-banner/order-bg.jpg')
+
+.page-banner__content--order
+  padding-right 30%
+
+  &::before
+    content ''
+    absolute($top:-30px,$right:0,$bottom:0,$left:0)
+    background url('../img/general/page-banner/order-bg.png') right 0 no-repeat
+    background-size contain

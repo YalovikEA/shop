@@ -38,3 +38,11 @@ mixin share(icon, link, text)
   .share-line
     +icon(icon)
     a(href= link)= text
+
+mixin catalogSliderItem(index, value)
+  .catalog-view__slider-item(data-thumb=`static/img/content/products/catalog/product${index}/product${value}.jpg`)
+    img(data-lazy=`static/img/content/products/catalog/product${index}/product${value}.jpg`)
+
+mixin tabsLink(dataShow,text)
+  li.tabs-list__item(show-tab= dataShow)&attributes(attributes)
+    span.tabs-list__text= text

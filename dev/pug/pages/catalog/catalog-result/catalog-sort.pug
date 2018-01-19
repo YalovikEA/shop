@@ -17,9 +17,9 @@ mixin sortVarLink(title)
     span.catalog-sort__title Показывать по
     +sortVarLink('10 товаров')
     ul.sort-view__list
-      li.sort-view__item.active
+      li.sort-view__item.active(data-catalog-view="standart")
         +icon('nine-square')
-      li.sort-view__item
+      li.sort-view__item(data-catalog-view="2col")
         +icon('four-square')
-      li.sort-view__item
+      li.sort-view__item(data-catalog-view="lines")
         +icon('line')
