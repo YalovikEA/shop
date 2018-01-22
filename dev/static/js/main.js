@@ -105,8 +105,8 @@ $(document).on('click','.tabs-list__item', function () {
 //   $('.tabs-content .' + tabName).addClass('active').siblings().removeClass('active');
 // });
 
-// Вопрос-Ответ
-$(document).on('click','.faq__title',function() {
+// Аккордион
+$(document).on('click','.accordion__title',function() {
   $(this).parent().toggleClass('active');
   var faqContent = $(this).siblings();
   if(faqContent.is(':visible')){

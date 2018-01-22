@@ -1,3 +1,32 @@
+mixin paymentItem(icon,title,text)
+  .payment-item.accordion-item
+    +icon(icon)
+    span.payment__title.accordion__title= title
+    .payment__content.accordion__content
+      p.payment__text.accordion__text= text
+
 .tab-content__item.tab-payment
-  p.for-customer-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus est quidem aperiam, soluta quisquam officia hic magnam distinctio voluptates excepturi veniam eum consequuntur commodi sit corrupti harum! Eius, quam assumenda.
-  p.for-customer-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum voluptate unde enim officia laboriosam alias veritatis qui soluta, perspiciatis explicabo voluptatem tempora fugiat omnis velit, sint ipsum ipsa fuga sequi ex, rem dignissimos fugit necessitatibus ad maxime dolore. Totam perspiciatis qui tenetur, iusto sit provident facere nobis aliquid. Laborum, deleniti!
+  .product-faq
+    +paymentItem('yandex',
+    'Наличными курьеру',
+    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
+
+    +paymentItem('webmoney',
+    'Банковский перевод',
+    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit')
+
+    +paymentItem('visa',
+    'Банковской картой курьеру',
+    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
+
+    +paymentItem('payment',
+    'Банковской картой онлайн',
+    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
+
+    +paymentItem('mastercard',
+    'Электронными деньгами',
+    'ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
+
+    +paymentItem('delivery',
+    'Наложный платеж',
+    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure')
