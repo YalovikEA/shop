@@ -1,12 +1,25 @@
 .page-banner
   background url('../img/general/catalog/catalog-banner-bg.jpg')
   background-size cover
-  padding 0
+
+  &::before
+    content ""
+    position absolute
+    top 0
+    bottom 0
+    right 0
+    left 0
+    background-color rgba(0,0,0,0.8)
+
+  &.page-banner--for-customer
+
+    .g-section-title
+      text-align left
 
 .page-banner__content
   position relative
-
-// .page-banner__text
+  padding 60px 50% 60px 0
+  color #fff
 
 .page-banner__show
   display inline-block

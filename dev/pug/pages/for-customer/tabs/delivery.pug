@@ -1,3 +1,35 @@
+mixin deliveryLine(key,val)
+  tr.delivery-table__line
+    td.delivery-table__key
+      span= key
+    td.delivery-table__val
+      span= val
+
 .tab-content__item.tab-delivery
-  p.for-customer-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus est quidem aperiam, soluta quisquam officia hic magnam distinctio voluptates excepturi veniam eum consequuntur commodi sit corrupti harum! Eius, quam assumenda.
-  p.for-customer-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus est quidem aperiam, soluta quisquam officia hic magnam distinctio voluptates excepturi veniam eum consequuntur commodi sit corrupti harum! Eius, quam assumenda.
+  .delivery__block
+    h3.g-block-title Доставка по Москве и Снкт-Петербургу
+    p.for-customer-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, aliquam modi impedit. Laborum voluptate unde enim officia laboriosam alias veritatis.
+    table.delivery-table
+      tbody
+        +deliveryLine('Стоимость заказа','Стоимость доставки')
+        +deliveryLine('до 1999 руб.','400')
+        +deliveryLine('от 2000 до 4999 руб.','300')
+        +deliveryLine('от 5000 до 9999 руб.','200')
+        +deliveryLine('от 7000 руб.','бесплатно')
+    p.for-customer-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea.
+  .delivery__block
+    h3.g-block-title Доставка по России
+    h4.g-block-sub-title Доставка по России - предоплата
+    p.for-customer-text Lorem ipsum dolor sit amet, consectetur adipisicing elit.! Itaque modi, obcaecati est necessitatibus:.
+    ol.delivery__list
+      li.delivery__item  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, provident, recusandae!
+      li.delivery__item  Dolor sit amet, consectetng elit. Nam pariatur doloremque, odit magnam? Aliquid, tempora fuga.
+      li.delivery__item  Consectetur adipisicing elit. Maiores eaque animi officia molestias error dignissimos aliquam quo officiis at eum corrupti, quos ipsa earum consequatur.
+
+    p.for-customer-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, tempora dolores sapiente eius, at eaque veritatis provident nisi eum minima consequatur obcaecati reprehenderit dolorem, consectetur magni omnis sint iste dolor! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint numquam eius, quasi laudantium molestiae eos consequuntur qui tenetur facilis! Nesciunt dolorem dolore recusandae! Ipsum dolor sit amet, consectetur adipisicing elit. Id, tempora dolores sapiente eius, at eaque veritatis provident nisi eum minima consequatur obcaecati reprehenderit dolorem, consectetur magni omnis sint iste dolor! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint numquam eius, quasi laudantium molestiae eos consequuntur qui tenetur facilis! Nesciunt dolorem dolore recusandae!
+
+    h4.g-block-sub-title Доставка по России - наложенный платеж
+    p.for-customer-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, tempora dolores sapiente eius, at eaque veritatis provident nisi eum minima consequatur obcaecati reprehenderit dolorem, consectetur magni omnis sint iste dolor!
+
+    h4.g-block-sub-title Обращаем ваше внимание
+    p.for-customer-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus nulla rem, quis ex aut incidunt modi aspernatur quia! Iusto dolores non qui libero accusantium in recusandae, dignissimos consequuntur nihil perferendis aut id incidunt dolorum laboriosam ad fugit officiis commodi maiores veritatis pariatur. Possimus rem doloremque modi impedit ex animi, debitis quia ullam corrupti asperiores fugiat doloribus. Doloremque dolorum hic perferendis in nostrum, debitis obcaecati quae. Dolorum, voluptates!
