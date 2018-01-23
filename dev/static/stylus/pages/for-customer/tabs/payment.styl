@@ -14,17 +14,17 @@
   padding 25px 30px
   padding-left 70px
   background lighten(grayColor, 70%)
-  // display flex
-  // align-items center
-
-  .icon
-    size(25px)
-    margin-right 20px
 
 .payment__title
   font-size rem(24)
   font-family boldFont
   border-bottom 1px dotted grayColor
+  position relative
+
+  .icon
+    absolute($top:50%,$left:-40px)
+    transform translateY(-50%)
+    size(25px)
 
 .payment__content
   padding 0
