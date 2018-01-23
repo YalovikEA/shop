@@ -1,0 +1,22 @@
+extends ../layout/common
+
+block variables
+  - var title = 'Избранные товары'
+  - var pageClass = 'favourite'
+
+block content
+  section.breadcrumbs
+    .container
+      ul.breadcrumbs-list
+        li.breadcrumbs-list__item
+          a.breadcrumbs-list__link(href="javascript:void(0);") Главная
+
+  section.favourite
+    .container
+      h2.g-section-title Избранные товары
+      .favourite__content
+        include favourite/favourite
+
+
+block script
+  script(src="https://www.youtube.com/iframe_api")
