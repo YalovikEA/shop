@@ -99,11 +99,26 @@ $(document).on('click','.tabs-list__item', function () {
   $('.tabs-content .' + tabName).addClass('active').siblings().removeClass('active');
 });
 
-// $('.tabs-list__item').click(function () {
-//   var tabName = $(this).attr('show-tab');
-//   $(this).addClass('active').siblings().removeClass('active');
-//   $('.tabs-content .' + tabName).addClass('active').siblings().removeClass('active');
-// });
+if (window.location.hash) {
+  var loc = window.location.hash.split('').splice(1).join(''),
+    tabsList = $('.tabs-list--for-customer li'),
+    tabsContentList = $('.tab-content__item');
+  for (var i = 0, iLen = tabsList.length; i < iLen; i++) {
+    var attr = $(tabsList[i]).attr('show-tab');
+    if (attr === loc) {
+      $(tabsList[i]).addClass('active');
+    } else {
+      $(tabsList[i]).removeClass('active');
+    }
+  }
+  for (var j = 0, jLen = tabsContentList.length; j < jLen; j++) {
+    if ($(tabsContentList[j]).hasClass(loc)) {
+      $(tabsContentList[j]).addClass('active');
+    } else {
+      $(tabsContentList[j]).removeClass('active');
+    }
+  }
+};
 
 // Вопрос-Ответ
 $(document).on('click','.faq__title',function() {
@@ -227,3 +242,4 @@ $(document).ready(function () {
   //   $('.js-catalog-view__slider').slick('setPosition');
   // }));
 });
+
