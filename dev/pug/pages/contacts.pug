@@ -1,0 +1,44 @@
+extends ../layout/common
+
+block variables
+  - var title = 'Контакты'
+  - var pageClass = 'contacts'
+
+block content
+  section.breadcrumbs
+    .container
+      ul.breadcrumbs-list
+        li.breadcrumbs-list__item
+          a.breadcrumbs-list__link(href="javascript:void(0);") Главная
+
+  section.contacts
+    .container
+      h1.g-page-title Контакты
+      .contacts-map#contacts-map
+        .contacts-content
+          span.contacts-title Наши координаты
+          .contacts-item
+            +icon('location')
+            span.contact-item__text г. Москва, ул. Нижегородская д.84
+          .contacts-item
+            +icon('delivery')
+            span.contact-item__title г. Москва, ул. Нижегородская д.84
+            span.contact-item__text СШ 55.232201
+            span.contact-item__text ВД 44.353541
+          .contacts-item
+            +icon('register')
+            a.contact-item__link(href="tel:8-555-66-45-85")
+              span.contact-item__text 8-555-66-45-85
+            a.contact-item__link(href="tel:8-777-33-45-85")
+              span.contact-item__text 8-777-33-45-85
+          .contacts-item
+            +icon('payment')
+            a.contact-item__link.contact-item__link--underline(href="mailto:location@gmail.com") location@gmail.com
+          .contacts-item
+            +icon('favourite')
+            span.contact-item__title Время работы
+            span.contact-item__text Понедельник-суббота с 8:00 до 18:00
+            span.contact-item__text Воскресенье с 8:00 до 15:00
+
+block script
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

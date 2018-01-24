@@ -237,9 +237,30 @@ $(document).ready(function () {
       }
     }
   });
-  // Для отображения слайдера после display:none -> display:block
-  // if ($(document).on('click','.product-prev-popup__link',function (){
-  //   $('.js-catalog-view__slider').slick('setPosition');
-  // }));
 });
 
+// Карта в контактах
+if ($('div').is('#contacts-map')) {
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('contacts-map', {
+        center: [55.734056, 37.702679],
+        zoom: 17
+      }, {
+        searchControlProvider: 'yandex#search'
+      }),
+
+      myPlacemark = new ymaps.Placemark([55.734298, 37.705823], {
+        hintContent: '',
+        balloonContent: ''
+      }, {
+        iconLayout: 'default#image',
+        iconImageHref: 'static/img/general/map-dot.png',
+        iconImageSize: [30, 42],
+        iconImageOffset: [-5, -38]
+      });
+    myMap.geoObjects
+      .add(myPlacemark);
+    myMap.behaviors.disable('scrollZoom');
+    myMap.controls.remove('trafficControl').remove('searchControl').remove('typeSelector').remove('geolocationControl').remove('fullScreenControl').remove('rulerControl');
+  });
+}

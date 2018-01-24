@@ -1,0 +1,43 @@
+#contacts-map
+  position relative
+  width 100%
+  height 500px
+
+.contacts
+  .g-page-title
+    margin-bottom 25px
+    text-align center
+
+.contacts-content
+  absolute($top:30px,$left:30px)
+  padding 30px 100px 30px 30px
+  background-color #fff
+  z-index 1
+
+.contacts-title
+  display block
+  margin-bottom 25px
+  font-family boldFont
+  text-transform uppercase
+
+.contacts-item
+  position relative
+  padding-left 35px
+  margin-bottom 15px
+
+  span
+    display block
+    margin-bottom 7px
+
+  &:last-child
+    margin-bottom 0
+
+  .icon
+    absolute($top:0,$left:0)
+    size(25px)
+
+.contact-item__title
+  color goldColor
+
+.contact-item__link--underline
+  border-bottom 1px solid blackColor
