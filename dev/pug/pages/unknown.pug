@@ -1,0 +1,40 @@
+extends ../layout/common
+
+block variables
+  - var title = 'Страница 404'
+  - var pageClass = 'unknown'
+
+block content
+  section.breadcrumbs
+    .container
+      ul.breadcrumbs-list
+        li.breadcrumbs-list__item
+          a.breadcrumbs-list__link(href="javascript:void(0);") Главная
+
+  section.unknown
+    .container
+      .unknown-content
+        h1.g-page-title Ошибка 404
+        h3.g-block-title Такой страницы не существует
+        p.unknown-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          =' '
+          a.unknown-text__link(href="javascript:void(0);") Hic sequiaspernatur
+          |  Lorem ipsum dolor
+          =' '
+          a.unknown-text__link(href="javascript:void(0);") dolorum ipsam illo!
+          |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, voluptate.
+        ul.unknown-list
+          each link in ['мебель','бытовая техника','хранение вина','посуда','ножи','хранение вина','посуда','мебель','бытовая техника']
+            li.unknown-list__item
+              a.unknown-list__link(href="javascript:void(0);")= link
+        form.unknown-form
+          .g-form-block.unknown-form__input
+            input.g-input(type="text")
+          .g-form-block.unknown-form__submit
+            input.g-btn.g-btn--black.g-btn--no-underline(type="submit" value="Найти")
+        p.unknown-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sequi
+          a.unknown-text__link(href="javascript:void(0);")  Напишите нам об этом
+
+
+block script
+  script(src="https://www.youtube.com/iframe_api")
