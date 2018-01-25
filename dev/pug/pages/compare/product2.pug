@@ -1,0 +1,29 @@
+mixin compareTableTD(val)
+  tr
+    td= val
+.compare-products__item
+  .compare-top
+    img.compare-product__img(src="static/img/content/products/product2/product2.jpg")
+    .compare-product__link
+      a(href="product.html") Набор мисок nest9 Food Preparation, JOSEPH JOSEPH
+      .compare-product__remove
+    .product-actions
+      .product-action.product-action__favourite
+        +icon('equal')
+        a(href="javascript:void(0);") В избранное
+    a.g-btn.g-btn--black(href="javascript:void(0);") В корзину
+  .compare-bottom
+    table.compare-table
+      thead
+        tr
+          th 4 300 &#8381;
+      tbody
+        +compareTableTD('Великобритания')
+        +compareTableTD('Подарочная')
+        +compareTableTD('Пластик')
+        +compareTableTD('14.5 см')
+        +compareTableTD('')
+        +compareTableTD('')
+        +compareTableTD('')
+        +compareTableTD('Подарочная')
+        +compareTableTD('')

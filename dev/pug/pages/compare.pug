@@ -1,0 +1,53 @@
+extends ../layout/common
+
+block variables
+  - var title = 'Сравнение товаров'
+  - var pageClass = 'compare'
+
+block content
+  section.breadcrumbs
+    .container
+      ul.breadcrumbs-list
+        li.breadcrumbs-list__item
+          a.breadcrumbs-list__link(href="javascript:void(0);") Главная
+
+  section.compare
+    .container
+      h1.g-page-title Сравнение товаров
+      .compare-content
+        .compare-products-slider__controls.compare-products-slider__controls--prev
+          +icon('arrow-down')
+        .compare-products-slider__controls.compare-products-slider__controls--next
+          +icon('arrow-up')
+        .compare-info
+          .compare-top
+            span Характеристики
+          .compare-bottom
+            table.compare-table.compare-table--info
+              thead
+                tr
+                  th Стоимость
+              tbody
+                +comapreTableTD('Страна')
+                +comapreTableTD('Упаковка')
+                +comapreTableTD('Материал')
+                +comapreTableTD('Высота')
+                +comapreTableTD('Предметов в наборе')
+                +comapreTableTD('Крушка')
+                +comapreTableTD('Объем')
+                +comapreTableTD('Ручки')
+                +comapreTableTD('Диаметр')
+
+        .compare-products
+          .js-compare-products
+            include compare/product1
+            include compare/product2
+            include compare/product3
+            include compare/product4
+            include compare/product1
+            include compare/product4
+            include compare/product3
+
+
+block script
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

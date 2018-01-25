@@ -1,0 +1,29 @@
+mixin compareTableTD(val)
+  tr
+    td= val
+.compare-products__item
+  .compare-top
+    img.compare-product__img(src="static/img/content/products/product4/product4.jpg")
+    .compare-product__link
+      a(href="product.html") 9 шт, серия Food Preparation, JOSEPH JOSEPH
+      .compare-product__remove
+    .product-actions
+      .product-action.product-action__favourite
+        +icon('equal')
+        a(href="javascript:void(0);") В избранное
+    a.g-btn.g-btn--black(href="javascript:void(0);") В корзину
+  .compare-bottom
+    table.compare-table
+      thead
+        tr
+          th 4 300 &#8381;
+      tbody
+        +compareTableTD('Великобритания')
+        +compareTableTD('')
+        +compareTableTD('Пластик')
+        +compareTableTD('14.5 см')
+        +compareTableTD('')
+        +compareTableTD('')
+        +compareTableTD('cool')
+        +compareTableTD('vonderful')
+        +compareTableTD('')

@@ -1,0 +1,126 @@
+.compare
+  .g-page-title
+    text-align center
+    margin-bottom 30px
+
+.compare-content
+  position relative
+  display flex
+  padding 0 50px
+
+  &::after
+    content ""
+    absolute($top:0,$bottom:0,$right:0)
+    z-index 1
+    width 200px
+    box-shadow inset -120px 0px 50px -20px rgba(255,255,255,0.95)
+
+.compare-info
+  width 20%
+  flex-shrink 0
+
+  .compare-top
+    display flex
+    align-items flex-end
+    padding-bottom 0
+
+.compare-top
+  margin-bottom 25px
+  height 300px
+  position relative
+
+  .product-actions
+    margin 0
+    absolute($bottom:60px)
+
+  .g-btn
+    width 100%
+    absolute($bottom:0)
+
+.compare-products
+  width 80%
+  flex-shrink 0
+  position relative
+
+  .compare-top
+    margin-right 10px
+
+.compare-product__img
+  height 125px
+  display:block
+  margin 0 auto
+  padding-bottom 15px
+
+.compare-product__link
+  margin-bottom 15px
+
+  a
+    text-decoration underline
+    line-height 1.5
+
+.compare-product__remove
+  size(18px)
+  position relative
+  display inline-block
+  border 2px solid blackColor
+  border-radius 50%
+  vertical-align middle
+  cursor pointer
+
+
+  &::after,
+  &::before
+    absolute($top:7px,$left:2px)
+    content ""
+    width 10px
+    height 1px
+    background-color #000
+
+  &::after
+    transform rotate(45deg)
+  &::before
+    transform rotate(-45deg)
+
+.compare-table
+  width 100%
+  border-collapse collapse
+
+  td,
+  th
+    padding 0
+    height 40px
+    line-height @height
+    text-align left
+  thead
+    tr
+      background-color lighten(grayColor, 90%)
+
+  tbody
+    tr
+      &:nth-child(even)
+        background-color lighten(grayColor, 90%)
+
+  &.compare-table--info
+    td,
+    th
+      padding 0 10px
+      color goldColor
+
+.compare-products-slider__controls
+  absolute($top:50%)
+  size(34px)
+  margin-top -17px
+  background-color blackColor
+  cursor pointer
+  z-index 2
+
+  .icon
+    absolute-center()
+    size(20px)
+    fill #fff
+
+.compare-products-slider__controls--prev
+  left 0
+
+.compare-products-slider__controls--next
+  right 0

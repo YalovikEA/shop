@@ -59,6 +59,14 @@ $(document).ready(function () {
     },
   });
 
+  $('.js-compare-products').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: '.compare-products-slider__controls--prev',
+    nextArrow: '.compare-products-slider__controls--next'
+  });
+
   // Позиционируем управление слайдера на главной странице
   function sliderElemPos(elem,pos) {
     var windowWidth = $(window).width(),
