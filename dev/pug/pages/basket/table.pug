@@ -1,0 +1,21 @@
+table.basket-table
+  thead
+    tr
+      each val in ['Товар','Цена','Количество','Сумма','']
+        th= val
+  tbody
+    +basketTR('product4.jpg',
+              'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, suscipit.',
+              '33 440',
+              '2',
+              '66 880')
+    +basketTR('product1.jpg',
+              'Новый уровень Минтруда: теперь не безработный ищет рабочее место, а наоборот',
+              '11 440',
+              '2',
+              '22 880')
+    +basketTR('product2.jpg',
+              '«Куршевель», который белорусу по карману. Репортаж из Закопане, зимней столицы Польши',
+              '55 500',
+              '3',
+              '165 500')

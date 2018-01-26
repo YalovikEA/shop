@@ -1,0 +1,36 @@
+section.search
+  .container
+    .search-content
+      form.search-form
+        .search-form__top
+          .g-form-block.g-form-block--search
+            +icon('search')
+            input.g-input(type="text")
+          .g-form-block.g-form-block--submit
+            input.g-btn.g-btn--black.g-btn--no-underline(type="submit" value="Найти")
+        .search-form__bottom
+          label.checkbox
+            | По артикулу
+            input(type="checkbox")
+            .checkbox-custom
+              +icon('check')
+          label.checkbox
+            | По названию
+            input(type="checkbox")
+            .checkbox-custom
+              +icon('check')
+          label.checkbox
+            | По описанию
+            input(type="checkbox")
+            .checkbox-custom
+              +icon('check')
+
+          .g-form-block
+            select.g-select
+              option в разделах
+              option Раздел 1
+              option Раздел 2
+              option Раздел 3
+          .search-reset
+            span.search-reset__icon
+            span.search-reset__text Сбросить настройки

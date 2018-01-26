@@ -51,3 +51,33 @@ mixin tabsLink(dataShow,text)
 mixin comapreTableTD(val)
   tr
     td= val
+
+mixin basketTR(img,title,price,count,totalPrice)
+  tr
+    td.basket-table__product
+      img.basket-table__img(src=`static/img/content/products/basket/${img}`)
+      a.basket-table__link(href="javascript:void(0);")= title
+    td.basket-table__price
+      span= price
+        |  &#8381;
+    td.basket-table__count
+      .basket-count
+        .basket-count__minus
+          span -
+        .basket-count__current
+          input.g-input(type="text" value=`${count}`)
+        .basket-count__plus
+          span +
+    td.basket-table__total
+      span= totalPrice
+        |  &#8381;
+    td.basket-table__remove
+      span
+
+mixin sortVarLink(title)
+  if(title === 'По популярности')
+    .sort-variants__link.active
+      span= title
+  else
+    .sort-variants__link
+      span= title

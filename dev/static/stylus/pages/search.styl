@@ -1,0 +1,70 @@
+.search
+  padding-bottom 0
+  .g-page-title
+    text-align center
+    margin-bottom 25px
+
+.search-content
+  max-width 800px
+  width 100%
+  margin 0 auto
+
+.search-form__top
+  margin-bottom 15px
+  display flex
+  justify-content space-between
+
+.g-form-block--search
+  width 75%
+  .g-input
+    padding-left 50px
+
+.g-form-block--submit
+  width 23%
+  .g-btn
+    width 100%
+
+.search-form__bottom
+  display flex
+  justify-content space-between
+  align-items center
+
+.search-reset
+  padding-left 60px
+  margin-left auto
+  cursor pointer
+  display flex
+  align-items center
+
+.search-reset__icon
+  size(18px)
+  position relative
+  cursor pointer
+
+  &::after,
+  &::before
+    absolute($top:8px,$left:2px)
+    content ""
+    width 14px
+    height 2px
+    background-color #000
+
+  &::after
+    transform rotate(45deg)
+  &::before
+    transform rotate(-45deg)
+
+.search-reset__text
+  margin-left 10px
+  border-bottom 1px solid lighten(grayColor,77%)
+  white-space nowrap
+
+.favourite-products
+  display flex
+  align-items flex-start
+  flex-wrap wrap
+  margin-right -15px
+  margin-bottom -60px
+
+  .product-prev
+    margin-bottom 65px

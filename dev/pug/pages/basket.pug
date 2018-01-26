@@ -1,0 +1,23 @@
+extends ../layout/common
+
+block variables
+  - var title = 'Корзина товаров'
+  - var pageClass = 'basket'
+
+block content
+  section.basket
+    .container
+      h1.g-page-title Корзина
+      .basket-content
+        main.basket-main
+          include basket/table
+          .basket-delivery
+            include basket/discount
+            include basket/delivery
+
+        aside.basket-aside
+
+
+
+block script
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

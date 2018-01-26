@@ -1,0 +1,37 @@
+extends ../layout/common
+
+block variables
+  - var title = 'Страница поиска'
+  - var pageClass = 'search'
+
+block content
+  section.breadcrumbs
+    .container
+      ul.breadcrumbs-list
+        li.breadcrumbs-list__item
+          a.breadcrumbs-list__link(href="index.html") Главная
+        li.breadcrumbs-list__item
+          a.breadcrumbs-list__link(href="javascript:void(0);") Результаты по запросу "Ваш запрос"
+
+  include ../modules/search
+
+  section.search-result
+    .container
+      .sort
+        .sort-common
+          span.sort__title Сортировать по
+          +sortVarLink('По цене')
+          +sortVarLink('По популярности')
+          +sortVarLink('По новизне')
+        .sort-view__count
+          span.sort__title Показывать по
+          +sortVarLink('10 товаров')
+
+
+      h1.g-page-title Избранные товары
+      .favourite-products
+        include favourite/favourite
+
+
+block script
+  script(src="https://www.youtube.com/iframe_api")

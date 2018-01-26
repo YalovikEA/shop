@@ -1,20 +1,11 @@
-mixin sortVarLink(title)
-  if(title === 'По популярности')
-    .sort-variants__link.active
-      span= title
-  else
-    .sort-variants__link
-      span= title
-
-
-.catalog-sort
-  .catalog-sort-common
-    span.catalog-sort__title Сортировать по
+.sort
+  .sort-common
+    span.sort__title Сортировать по
     +sortVarLink('По цене')
     +sortVarLink('По популярности')
     +sortVarLink('По новизне')
-  .catalog-sort-view__count
-    span.catalog-sort__title Показывать по
+  .sort-view__count
+    span.sort__title Показывать по
     +sortVarLink('10 товаров')
     ul.sort-view__list
       li.sort-view__item.active(data-catalog-view="standart")

@@ -2,17 +2,17 @@
   "headerNavInfo": {
     "howOrder": {
       "title": "Как заказать",
-      "link": "javascript:void(0)",
+      "link": "for-customer.html#tab-order",
       "icon": "howOrder"
     },
     "payment" : {
       "title": "Оплата",
-      "link": "javascript:void(0)",
+      "link": "for-customer.html#tab-payment",
       "icon": "payment"
     },
     "delivery" : {
       "title": "Доставка",
-      "link": "javascript:void(0)",
+      "link": "for-customer.html#tab-delivery",
       "icon": "delivery"
     }
   },
@@ -36,19 +36,19 @@
   "headerNavUser": {
     "equal": {
       "title": "Сравнение",
-      "link": "javascript:void(0)",
+      "link": "compare.html",
       "icon": "equal",
       "number": "17"
     },
     "favourite" : {
       "title": "Избранное",
-      "link": "javascript:void(0)",
+      "link": "favourite.html",
       "icon": "favourite",
       "number": "4"
     },
     "basket" : {
       "title": "Корзина",
-      "link": "javascript:void(0)",
+      "link": "basket.html",
       "icon": "basket",
       "number": "23"
     }
