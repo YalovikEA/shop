@@ -1,26 +1,30 @@
 .main-nav
+  position relative
   display flex
   align-items center
-  padding 20px 0
 
 .main-nav__list
   display flex
 
-.main-nav__item
-  margin-right 30px
-
-  &:last-child
-    margin-right 0
-
 .main-nav__link
+  display block
+  padding 20px 10px
   font-size rem(15)
   font-family boldFont
   color #fff
   text-transform uppercase
+  transition all linear .2s
+
+  &:hover,
+  &.active
+    background-color blackColor
+    color goldColor
 
 .header-search
   margin-left auto
+  cursor pointer
 
   .icon-search
     fill #fff
     size(25px)
+

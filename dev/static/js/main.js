@@ -271,4 +271,48 @@ if ($('div').is('#contacts-map')) {
     myMap.behaviors.disable('scrollZoom');
     myMap.controls.remove('trafficControl').remove('searchControl').remove('typeSelector').remove('geolocationControl').remove('fullScreenControl').remove('rulerControl');
   });
-}
+};
+
+$(".main-nav__link").hover(
+  function () {
+    var hideMenu = $(this).data('hide-menu');
+    $.ajax({
+      url: "menu-hide/" + hideMenu + ".html"
+    })
+      .done(function(html) {
+        $("#main-nav-hide").append(html);
+      });
+  }, function () {
+    $("#main-nav-hide").empty();
+  }
+);
+
+
+// $(".main-nav__link").hover(
+//   function () {
+//     var hideMenu = $(this).data('hide-menu');
+//         checkMenuItem = $(this)
+//     $.ajax({
+//       url: 'menu-hide/' + hideMenu + '.html'
+//     })
+//       .done(function (html) {
+//         $("#main-nav-hide").append(html);
+//       });
+//     $(".main-nav__link").removeClass('active');
+//     checkMenuItem.addClass('active');
+//   }, function () {
+//     if($("#main-nav-hide").is(':hover')) {
+//       $("#main-nav-hide").hover(
+//         function () {
+//         }, function () {
+//           $("#main-nav-hide").empty();
+//           $(".main-nav__link").removeClass('active');
+//         }
+//       );
+
+//     } else {
+//       $("#main-nav-hide").empty();
+//       $(".main-nav__link").removeClass('active');
+//     }
+//   }
+// );

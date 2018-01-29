@@ -1,17 +1,13 @@
-mixin mainNavLink(title)
-  li.main-nav__item
-    a(href="javascript:void(0);").main-nav__link= title
-
 nav.main-nav
   ul.main-nav__list
-    +mainNavLink('Мебель')
-    +mainNavLink('Бытовая техника')
-    +mainNavLink('Храниение вина')
-    +mainNavLink('Посуда')
-    +mainNavLink('Ножи')
-    +mainNavLink('Бар и хрусталь')
-    +mainNavLink('Сервировка')
-    +mainNavLink('Кухонная утварь')
-    +mainNavLink('Текстиль')
+    +mainNavLink('Мебель','furniture')
+    +mainNavLink('Бытовая техника','appliances')
+    +mainNavLink('Храниение вина','storage-wine')
+    +mainNavLink('Посуда','crockery')
+    +mainNavLink('Ножи','knives')
+    +mainNavLink('Бар и хрусталь','bar')
+    +mainNavLink('Сервировка','laying')
+    +mainNavLink('Кухонная утварь','kitchenware')
+    +mainNavLink('Текстиль','textile')
   .header-search.search
     +icon('search')

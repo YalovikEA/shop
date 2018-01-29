@@ -1,0 +1,126 @@
+.main-nav-hide
+  absolute($left:0,$right:0)
+  background-color blackColor
+
+.main-nav-submenu
+  display flex
+  padding 10px 0
+
+.submenu-category
+  width 60%
+  flex-shrink 0
+  padding-right 25px
+
+.submenu-category__item
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+
+.submenu-category__title
+  position relative
+  text-transform uppercase
+  font-family boldFont
+  display block
+  width 100%
+  color #fff
+  margin 25px 0
+  border-bottom 1px solid lighten(blackColor,75%)
+
+  span
+    display inline-block
+    background-color blackColor
+    padding-right 20px
+    absolute($top:50%,$left:0)
+    transform translateY(-50%)
+    font-size rem(16)
+    text-transform uppercase
+
+.submenu-category-list
+  width 48%
+  flex-shrink 0
+
+.submenu-category-list__item
+  margin-bottom 10px
+
+.submenu-list__link
+  color #fff
+  margin-right 5px
+  text-decoration underline
+
+  &:hover
+    color orange
+
+.submenu-list__count
+  color goldColor
+
+.submenu-brands
+  padding 30px
+  width 20%
+  flex-shrink 0
+  background-color darken(blackColor, 75%)
+
+.submenu-promo
+  background-color #fff
+  padding 10px
+
+.submenu-promo__item
+  padding 10px
+  border 2px solid transparent
+
+  &:hover
+    border-color #000
+
+  &.submenu-promo__item--green
+    .submenu-promo-mark
+      background-color green
+    .submenu-promo-price
+      border-color green
+
+  &.submenu-promo__item--orange
+    .submenu-promo-mark
+      right 0
+      background-color orange
+    .submenu-promo-price
+      border-color orange
+
+
+.submenu-promo-top
+  position relative
+
+.submenu-promo-mark
+  size(68px)
+  position absolute
+  border-radius 50%
+
+  span
+    absolute-center()
+    color #fff
+    font-size rem(15)
+
+.submenu-promo__img
+  max-width 100%
+  display block
+  margin 0 auto 20px
+
+.submenu-promo__link
+  display inline-block
+  margin-bottom 15px
+  text-decoration underline
+
+.submenu-promo-price
+  display flex
+  margin-bottom 20px
+  border 2px solid transparent
+
+.submenu-promo-price__old,
+.submenu-promo-price__new
+  width 50%
+  flex-shrink 0
+  padding 10px 5px
+  text-align center
+
+
+.submenu-promo-price__new
+  color #fff
+  font-family boldFont
+  background-color green
