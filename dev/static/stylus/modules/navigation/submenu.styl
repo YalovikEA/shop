@@ -1,4 +1,5 @@
 .main-nav-hide
+  z-index 1000
   absolute($left:0,$right:0)
   background-color blackColor
 
@@ -58,6 +59,14 @@
   width 20%
   flex-shrink 0
   background-color darken(blackColor, 75%)
+
+  .submenu-list__link
+    text-transform uppercase
+    font-size rem(16)
+
+  .submenu-list__count
+    font-size rem(15)
+
 
 .submenu-promo
   background-color #fff
